@@ -18,4 +18,4 @@ Player/mixer de DJ instalável (PWA). Funciona offline após a primeira visita.
 - Os dados ficam **por navegador e por origem**: instalar o app e abrir no navegador compartilham dados, mas trocar de domínio ou limpar dados do site apaga tudo. Use o backup de sessão/presets do próprio app.
 
 ## Atualizar uma versão publicada
-Altere `CACHE_VERSION` em `sw.js` (ex.: `bbpm-shell-v3`) a cada deploy.
+Altere `CACHE_VERSION` em `sw.js` (ex.: `bbpm-shell-v2`) a cada deploy.

@@ -1,7 +1,7 @@
 /* BBPM — Service Worker (cache offline do shell do app).
  * Os dados do usuário (localStorage / IndexedDB) NÃO ficam aqui e nunca são apagados por este arquivo.
  * Ao publicar uma nova versão, aumente CACHE_VERSION. */
-const CACHE_VERSION = 'bbpm-shell-v2';
+const CACHE_VERSION = 'bbpm-shell-v1';
 const SHELL = [
   './',
   './index.html',

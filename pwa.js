@@ -7,18 +7,6 @@
     log(msg);
   };
 
-
-  // 0) App instalado (standalone/fullscreen): já está em tela cheia. Chamar requestFullscreen() de novo
-  //    muda o modo da janela e, em celulares com notch, deixa uma faixa clara lateral. Neutraliza a chamada
-  //    e só trava a orientação.
-  const installed = ['fullscreen', 'standalone', 'minimal-ui'].some(m => matchMedia('(display-mode: ' + m + ')').matches) || navigator.standalone === true;
-  if (installed && Element.prototype.requestFullscreen) {
-    Element.prototype.requestFullscreen = function () {
-      try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(() => {}); } catch (_) {}
-      return Promise.resolve();
-    };
-  }
-
   // 1) Service worker (exige HTTPS ou localhost — GitHub Pages já é HTTPS).
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
